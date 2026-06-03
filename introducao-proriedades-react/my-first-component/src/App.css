@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  color: #000;
 }
 
 #main-title {
@@ -21,4 +22,25 @@
 
 .recipe-description {
   font-size: 1rem;
+}
+
+.recipe-card {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  width: 300px;
+  min-height: 300px;
+  padding: 24px;
+}
+
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.recipe-button {
+  background-color: darkcyan;
+  margin-top: 24px;
+  color: white;
 }

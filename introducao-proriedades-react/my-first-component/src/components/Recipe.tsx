@@ -1,22 +1,25 @@
-interface Props {
-  imageSrc: string
-  imageSize?: number
-  coffee: {
-    name: string
-    description: string
-    preparationTime?: number
-  }
+import { PropsWithChildren } from 'react'
+
+interface RecipeProps {
+  onClick?: () => void
+  id?: string
 }
 
-export function Recipe({ imageSrc, coffee, imageSize = 170 }: Props) {
+export function Recipe({
+  children,
+  onClick,
+  id
+}: PropsWithChildren<RecipeProps>) {
+  function handleClick() {
+    if (onClick) onClick()
+  }
+
   return (
-    <>
-      <img src={imageSrc} alt={coffee.name} width={imageSize} />
-      <h2 className="recipe-title">{coffee.name}</h2>
-      <p className="recipe-description">{coffee.description}</p>
-      <p className="recipe-description">
-        <b>Tempo de preparo</b>: {coffee.preparationTime}
-      </p>
-    </>
+    <div className="recipe-card" id={id ? `recipe-card-${id}` : undefined}>
+      {children}
+      <button onClick={handleClick} className="recipe-button">
+        Ver Receita
+      </button>
+    </div>
   )
 }

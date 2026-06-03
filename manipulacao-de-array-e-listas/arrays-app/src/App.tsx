@@ -1,10 +1,11 @@
 import './App.css'
+import { List } from './List'
 
 function App() {
-
   return (
     <>
-        <h1>19</h1>
+      <h1>Cardápio Starbucks</h1>
+      <List />
     </>
   )
 }
