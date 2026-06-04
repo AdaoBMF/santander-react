@@ -5,3 +5,14 @@
   text-align: center;
 }
 
+.top-sale-item {
+  padding: 24px;
+  background-color: maroon;
+  color: white;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.top-sale-item p {
+  margin: 0;
+}
